@@ -28,7 +28,24 @@ The goal of this exercise is to design a read-only API (REST or GraphAPI) that r
 * **May 12, 2024:**
 * Add EntityService for a cleaner Service, Controller layers
 * Finalize the project by adding new GET mappings.
-  * Filter by one or more fields/attributes (e.g. /compensation_data/fields?industry=Education&location=Ankara
-  * Sort by one or more fields/attributes (e.g. /compensation_data?sort=last_name)
-  * Return a sparse fieldset (e.g. /compensation_data/fields=jobTitle,salary)
 * Add screenshots
+
+  
+  * **Get single record**
+  <img width="1423" alt="findById" src="https://github.com/ceydas/rent-carla-backend-case/assets/26047050/2b47a1d3-9c90-4125-b797-c4304d296ef2">
+  
+  * **Filter by one or more fields/attributes (e.g. /compensation_data/fields?industry=Education&location=Ankara**
+    <img width="1200" alt="findBy_Industry_Location" src="https://github.com/ceydas/rent-carla-backend-case/assets/26047050/a878f992-8df5-48dc-a019-390ea49ee668">
+    
+  * **Sort by one or more fields/attributes (e.g. /compensation_data?sort=last_name)**
+    <img width="1196" alt="findAll_SORT_ageRange_jobTitle" src="https://github.com/ceydas/rent-carla-backend-case/assets/26047050/0d3530d6-ebaa-41e6-8ee6-27e343b1a2a7">
+
+  * **Unsorted**
+    <img width="1275" alt="findAll_UNSORTED" src="https://github.com/ceydas/rent-carla-backend-case/assets/26047050/d4ddefae-eba7-46b5-b67e-2fa5a74311f9">
+
+  * **Return a sparse fieldset (e.g. /compensation_data/fields=jobTitle,salary)**
+    <img width="1177" alt="sparse_output" src="https://github.com/ceydas/rent-carla-backend-case/assets/26047050/d2977a93-cf60-44d2-92e7-9c9ce3a42542">
+
+
+
+
