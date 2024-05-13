@@ -24,3 +24,11 @@ The goal of this exercise is to design a read-only API (REST or GraphAPI) that r
   * Sent a postman request to save the data to PostgreSQL
   * Added Controller, Service and Repository.
   * **Reflections**: Working with JSON took way longer than I expected, also realized I may need to revisit some core Java concepts like interface, abstract class.
+
+* **May 12, 2024:**
+* Add EntityService for a cleaner Service, Controller layers
+* Finalize the project by adding new GET mappings.
+  * Filter by one or more fields/attributes (e.g. /compensation_data/fields?industry=Education&location=Ankara
+  * Sort by one or more fields/attributes (e.g. /compensation_data?sort=last_name)
+  * Return a sparse fieldset (e.g. /compensation_data/fields=jobTitle,salary)
+* Add screenshots
