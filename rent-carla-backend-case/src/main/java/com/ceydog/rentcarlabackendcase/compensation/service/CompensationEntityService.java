@@ -1,6 +1,7 @@
 package com.ceydog.rentcarlabackendcase.compensation.service;
 
 import com.ceydog.rentcarlabackendcase.compensation.dto.CompensationJsonDto;
+import com.ceydog.rentcarlabackendcase.compensation.dto.CompensationSparseDto;
 import com.ceydog.rentcarlabackendcase.compensation.entity.Compensation;
 import com.ceydog.rentcarlabackendcase.compensation.json.JsonHelper;
 import com.ceydog.rentcarlabackendcase.compensation.mapper.CompensationMapper;
@@ -18,13 +19,13 @@ import java.util.Optional;
 public class CompensationEntityService {
     private final CompensationRepository compensationRepository;
 
-    public List<Compensation> findAll() throws IOException {
+    public List<Compensation> findAll() {
         List<Compensation> compensationList = compensationRepository.findAll();
 
         return compensationList;
     }
 
-    public List<Compensation> findAll(Pageable pageable) throws IOException {
+    public List<Compensation> findAll(Pageable pageable) {
         List<Compensation> compensationList = compensationRepository.findAll(pageable).getContent();
 
         return compensationList;
@@ -45,6 +46,10 @@ public class CompensationEntityService {
 
     }
 
+    public Compensation findCompensationByIndustryAndLocation(String industry, String location){
+        Compensation compensation = compensationRepository.findCompensationByIndustryAndLocation(industry, location);
+        return compensation;
+    }
     public List<Compensation> findAllByAnnualSalaryGreaterThanEqualAndLocation(String annualSalary, String location){
         List<Compensation> compensationList = compensationRepository.findAllByAnnualSalaryGreaterThanEqualAndLocation(annualSalary,location);
         return compensationList;
@@ -55,5 +60,6 @@ public class CompensationEntityService {
         List<Compensation> compensationList = CompensationMapper.INSTANCE.convertToCompensationList(compensationJsonDtoList);
         compensationRepository.saveAll(compensationList);
     }
+
 
 }

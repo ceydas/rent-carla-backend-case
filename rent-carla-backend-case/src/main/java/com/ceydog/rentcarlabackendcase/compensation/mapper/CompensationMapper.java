@@ -1,6 +1,7 @@
 package com.ceydog.rentcarlabackendcase.compensation.mapper;
 
 import com.ceydog.rentcarlabackendcase.compensation.dto.CompensationJsonDto;
+import com.ceydog.rentcarlabackendcase.compensation.dto.CompensationSparseDto;
 import com.ceydog.rentcarlabackendcase.compensation.entity.Compensation;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
@@ -19,6 +20,8 @@ public interface CompensationMapper {
     List<CompensationJsonDto> convertToCompensationDtoList(List<Compensation> compensationList);
 
     List<Compensation> convertToCompensationList(List<CompensationJsonDto> compensationJsonDto);
+
+    List<CompensationSparseDto> convertToCompensationSparseDtoList(List<Compensation> compensationList);
 
 
 
