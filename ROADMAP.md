@@ -3,7 +3,8 @@
 
 
 **Areas of Improvement**
-* Normally, the CompensationService should not directly access the CompensationRepository. A CompensationEntityService class maybe useful.
 * Exceptions are currently hardcoded.
 * Revisit URL structure best practices
 * Dockerize the application
+* Unit tests
+* Swagger-UI screenshots for accessibility
